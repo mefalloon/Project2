@@ -40,11 +40,4 @@ body > a {
   text-align: center;
 }
 
-.verticalLine {
-  position: absolute;
-  background-color: blue;
-  width: 6px;
-  top: 91px;
-  bottom: 0px;
-  left: 50%;
-}
+

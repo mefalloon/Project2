@@ -23,9 +23,7 @@ require('./config/passport');
 const app = express();
 
 
-
-
-// view engine setup
+//(view) engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -57,6 +55,8 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRouter); //localhost:3000
 app.use('/events', eventsRouter); //localhost:3000
+
+
 
 // invalid request, send 404 page
 app.use(function(req, res) {

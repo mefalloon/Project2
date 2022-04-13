@@ -9,29 +9,24 @@
 </head>
 <body>
         <nav>
-            <a href="/events/new">Add Event</a>
-            <a href="/events/">All Events</a>
+            <a href="/events/">Home</a>
             
           </nav>
+<div class="container">
+     <h1> RSVP and Connect !</h1>
 
-          <table id="list">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Release<br>Year</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% events.forEach(function(m) { %>
-                <tr>
-                  <td><%= m.title %></td>
-                  <td><%= m.releaseYear %></td>
-                  <td><a href="/events/<%= m._id %>">DETAILS</a></td>
-                </tr>
-                <% }); %>
-              </tbody>
-            </table>
 
+            <div class="gallery">
+                <ul>
+                    <li>Name</li>
+                    <li>Location</li>
+                    <li> Date </li>
+                    <a href="/events/new/">Add Events</a>
+                    
+        
+
+ 
+
+            </div>
             </body>
             </html>
