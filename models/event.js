@@ -3,9 +3,10 @@ const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
     name: String,
+    img: String,
     date: Date,
     location: [String],
-    needVax: { type: Boolean, default: false }
+    RSVP: { type: Boolean, default: false }
 
 
 });
