@@ -11,6 +11,7 @@ const methodOverride = require('method-override');
 //connect to database with Mongoose
 const indexRouter = require('./routes/index');
 const eventsRouter = require('./routes/events');
+const bodyParser= require('body-parser');
 // load the env consts
 
 
@@ -34,6 +35,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 // mount the session middleware
 app.use(session({
   secret: process.env.SECRET,

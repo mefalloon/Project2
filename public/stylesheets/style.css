@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family:'Josefin Sans', sans-serif;
-  color: #41a8bd;
+  color: #f5f5f5;
 }
 
 body {
@@ -34,10 +34,26 @@ nav > a {
 
 body > a {
   height: 100vh;
+  text-decoration: none;
 }
 
 .home-content {
   text-align: center;
+} 
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
 }
 
-
+#overlay {
+  margin: 100px;
+  background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
