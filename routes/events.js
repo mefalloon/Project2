@@ -6,18 +6,20 @@ const Event = require('../models/event');
 // const eventsCtrl = require('../controllers/events.js');
 
 //all events route 
-router.get('/', (req, res) => {
-    res.render('events/index')
+router.get('/', async (req, res) => {
+    try {
+        const events = await Event.find({})
+        res.render('events/index', { events: events })
+    } catch {
+        res.redirect('events/index')
+    }
+    
 });
-
-
-// new eventer route
+// new event route
 router.get('/new', (req, res) => {
     res.render('events/new', { event: new Event() })
 });
-
 //POST//create route
-
 router.post('/', (req, res) => {
     const event = new Event({
         name: req.body.name
@@ -35,17 +37,4 @@ router.post('/', (req, res) => {
 })
     // res.send('req.body.name')
 });
-// router.get('/', (req, res) => {
-//     const article = [{
-//         title: 'test event',
-//         createdat: Date.now(),
-//         description: 'test description'
-
-//     }]
-//         res.render('index', { events: events})
-    
-// })
-// // router.get('/', eventsCtrl.index);
-// // router.get('/new',eventsCtrl.new);
-
 module.exports = router;
