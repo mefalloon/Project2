@@ -12,14 +12,16 @@ const Event = require('../models/event');
 // all events route 
 router.get('/', async (req, res) => {
     let searchOptions = {}
-    if (req.query.name != null && req.query.name !== '') {
-        searchOptions.name = new RegExp(req.query.name, 'i')
-    }
+    // if (req.query.name != null && req.query.name !== '') {
+    //     searchOptions.name = new RegExp(req.query.name, 'i')
+    // }
     try {
-        const events = await Event.finds(searchOptions)
-        res.render('events/new', {
-           events: events,
-           searchOptions: req.query
+        const events = await Event.find(searchOptions)
+        console.log("in get events")
+        console.log(events)
+        res.render('events', {
+           events
+          //  searchOptions: req.query
         })
     } catch {
         res.redirect('events')
@@ -31,13 +33,17 @@ router.get('/', async (req, res) => {
 router.get('/new', (req, res) => {
     res.render('events/new', { event: new Event() })
 });
+
 //POST//create route
 router.post('/', async (req, res) => {
     const event = new Event({
       name: req.body.name
     })
     try {
-      const newEvent = await author.save()
+      console.log("in try with :")
+      console.log(req.body.name)
+      event.save()
+      // const newEvent = await event.save()
       // res.redirect(`authors/${newAuthor.id}`)
       res.redirect(`events`)
     } catch {
@@ -48,6 +54,16 @@ router.post('/', async (req, res) => {
     }
   })
 
+  router.delete('/:id', async(req, res) => {
+    console.log("in delete")
+    Event.findOne({'_id': req.params.id}, function(err, event){
+      console.log("need to find")
+      console.log(event)
+      // const event = eventDocument.id(req.params.id)
+      event.remove()
+      res.redirect(`/events`)
+    })
+  })
 
 
 

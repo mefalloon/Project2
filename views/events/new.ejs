@@ -1,11 +1,33 @@
 <%- include('../partials/header') %>
+<div class="new-form">
+<h2> Create Your Own Event! </h2>
+<p>Meet new people and connect by adding your event</p>
 
-<h2> new event </h2>
+
 
 <form action="/events" method="POST">
-<%- include('form')%> 
+    <label>Event Name:</label>
+    <input type="text" name="name"><br>
+
+    <label>Load Your Image</label>
+    <input type="text" name="image"><br>
+
+    <label>Drop the location:</label>
+    <select name="location">
+    <!-- <input type="text" name="location"> -->
+    <option value="Downtown">Downtown</option>
+    <option value="North Hollywood">North Hollywood</option>
+    <option value="Venice Beach">Venice Beach</option>
+    <option value="Koreatown">Koreatown</option>
+   </select>
+
     <a href="/events">Cancel</a>
     <button type="submit">Create</button>
+  
+</div>
+
 </form>
+
+
 
 

@@ -1,22 +1,5 @@
-<%- include('../partials/header') %>
- 
-
-
-
-<h2>Search Events</h2>
-<form action="/events" method="GET">
-  <label>Name</label>
-  <input type="text" name="name">
-  <button type="submit">Search</button>
-</form>
-<br>
-<% events.forEach(event => { %>
-  <div><%= event.name %></div>
-<% }) %>
-
-</body>
-</html>
-<!-- <!DOCTYPE html>
+<!-- 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Document</title>
-</head>
-<body>
+</head> -->
+<!-- <body>
         <nav>
             <a href="/events/">Home</a>
             
-          </nav>
-<div class="container">
+          </nav> -->
+          <%- include('../partials/header') %>
+          <div class="container">
      <h1> RSVP and Connect !</h1>
 
 
@@ -39,9 +23,31 @@
                     <li>Name</li>
                     <li>Location</li>
                     <li> Date </li>
-\
+
 
             </div>
-            </body>
-            </html> -->
+
+            <table id="list">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% events.forEach(function(ev) { %>
+                  <tr>
+                    <td><%= ev.name %></td> <!--figure out how to print just name-->
+                  </tr>
+                  <tr>
+                    <td> <form action="/events/<%= ev._id %>?_method=DELETE" method="POST">
+                      <button type="submit">X</button>
+                    </form>
+                  </td> <!--figure out how to print just name-->
+                  </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+            <!-- </body>
+            </html> -->  
 

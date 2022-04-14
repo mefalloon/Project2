@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
+const bodyParser= require('body-parser');
 // session middleware
 const session = require('express-session');
 const passport = require('passport');
@@ -11,7 +12,7 @@ const methodOverride = require('method-override');
 //connect to database with Mongoose
 const indexRouter = require('./routes/index');
 const eventsRouter = require('./routes/events');
-const bodyParser= require('body-parser');
+const detailsRouter = require('./routes/details');
 // load the env consts
 
 
@@ -57,6 +58,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRouter); //localhost:3000
 app.use('/events', eventsRouter); //localhost:3000
+app.use('/details', detailsRouter);
 
 
 

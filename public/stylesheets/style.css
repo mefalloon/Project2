@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family:'Josefin Sans', sans-serif;
-  color: #f5f5f5;
+  color: #cf4b4b;
 }
 
 body {
@@ -56,4 +56,9 @@ body > a {
   background-color: rgba(0,0,0,0.4); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
+}
+
+.new-form {
+  text-align: center;
+
 }
