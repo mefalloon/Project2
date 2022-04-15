@@ -8,12 +8,10 @@ The app uses Google API to allow all users to log in and have access to the goal
 </p>
 
 <h2>Where it stared:</h2>
-![alt text](./public/images/w1.png);
-![alt text](./public/images/1.png)
 
+![wireframe](./public/images/w1.png)  
 
-
-
+![view page](./public/images/1.png)  
 <h2>Technologies Used:</h2>
 <ul>
 <li>CSS</li>
