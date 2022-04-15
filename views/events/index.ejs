@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
 
-<div class="header">TIME WAITS FOR NO ONE!</div>
+
+<div class="header"><h1>TIME WAITS FOR NO ONE<h1>
+<p>AND NEITHER SHOULD YOU !</p></h1></div>
               <table>               
                 <thead>
                   <tr>
@@ -33,19 +35,14 @@
                     <td><%= ev.description %></td>
                     <td><%= ev.location %></td>
                     <td><%= ev.schedule %></td>
-                    <td><input type="checkbox" name="completed" notchecked>
+                    <td><input class="checkbox" type="checkbox" name="completed" notchecked>
                     </td>
                     <td>
                       <form action="/events/<%= ev._id %>?_method=DELETE" method="POST">
                       <button class="button4" type="submit">CLEAR</button> 
                     </form> </td>
-                   
-                   
-                  </tr>
+                   </tr>
                   <tr>
-                 
-
-                   <!--figure out how to print just name-->
                   </tr>
                   <% }); %>
                 </tbody>

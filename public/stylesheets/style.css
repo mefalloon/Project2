@@ -53,6 +53,7 @@ body > a {
 
 
 .home-content {
+  padding-bottom: 10px;
   text-align: center;
   height: 200px;
   position: relative;
@@ -60,20 +61,14 @@ body > a {
 
 
 #text{
-  padding-left: 50%;
+  margin-top: 20%;
+  margin-left: 50%;
+  margin-right: 10%;
+  margin-bottom: 0%;
   font-size: 40px;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 } 
-
-
-/* position: absolute;
-/* position: absolute; */
-/* top: 50%;
-left: 50%;
-bottom: -20%;
-font-size: 50px;
-color: white; */ 
 
 
 #overlay {
@@ -129,7 +124,7 @@ color: white; */
 }
 
 .button4 {
-  background-color: rgb(255, 255, 255);
+  background-color: none;
   padding: .3rem 1rem;
   border: none;
   text-align: center;
@@ -162,7 +157,7 @@ color: white; */
   padding: 20px;
 }
 
-input[type=text], select, textarea{
+input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -173,7 +168,10 @@ input[type=text], select, textarea{
 
 table {
   border-width: 10px;
-  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  /* width: 90%; */
   background-color: #ffffff;
 } 
 
@@ -194,4 +192,18 @@ tr:nth-child(odd){
 th {
   background-color: #ffffff;
   color: white;
+}
+
+.header {
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+  background-color: #ffffff;
+}
+
+.checkbox {
+  accent-color: rgb(143, 26, 26);
 }
