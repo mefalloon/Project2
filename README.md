@@ -7,6 +7,12 @@ An application called RSVP where people could find events in their local area an
 ![yikes](./public/images/yikes.png)<br>
 AHH OUH! In the time frame I was allocated with I wasnt able to do my idea in the way that I wanted and chose to go a different route to make sure there was a product that could be viewed.
 
+<b>IN 24 HRS<b>
+<ul>
+<li>Complete CSS turn-around</li>
+<li>Properly implement CRUD</li>
+<li>Oauth:User log-in compability</li>
+
 <p>"Nizer" is your gateway to perfect organization, in its first phase youll be able to add a goal or plan out your day to get you on the right <b>path</b> (pun intended).<br>
 
 The name is a simple break down of what you're looking to do which is organize!<br>
