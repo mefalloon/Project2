@@ -14,15 +14,15 @@ const detailSchema = new Schema({
     },
 
 
-    decription: {
-        type: String,
-        required: true
-    },
+    // decription: {
+    //     type: String,
+    //     required: true
+    // },
 
-    location: {
-        type: [String],
-        required: true
-    },
+    // location: {
+    //     type: [String],
+    //     required: true
+    // },
 
     date: {
         type: Date,
@@ -31,3 +31,4 @@ const detailSchema = new Schema({
 
 });
 module.exports = mongoose.model('Detail', detailSchema);
+

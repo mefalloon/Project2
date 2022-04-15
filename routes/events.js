@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
         console.log("in get events")
         console.log(events)
         res.render('events', {
-           events
+        events
           //  searchOptions: req.query
         })
     } catch {
@@ -37,15 +37,19 @@ router.get('/new', (req, res) => {
 //POST//create route
 router.post('/', async (req, res) => {
     const event = new Event({
-      name: req.body.name
+      name: req.body.name,
+      location: req.body.location,
+      description:  req.body.description
+
     })
     try {
       console.log("in try with :")
-      console.log(req.body.name)
+      console.log(event)
       event.save()
+    
       // const newEvent = await event.save()
       // res.redirect(`authors/${newAuthor.id}`)
-      res.redirect(`events`)
+      res.redirect('/events')
     } catch {
       res.render('events/new', {
         event: event,

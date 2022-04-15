@@ -5,22 +5,29 @@ const detail = require('../models/detail');
 const event = require('../models/event');
 
 //all details
-router.get('/', async (req,res, next) => {
-res.send('word')
-});
+// router.get('/', async (req,res, next) => {
+// res.render('details', {
+//     details
+// })
+// });
+
+
+
 
 // new detail route
 router.get('/new', async (req, res) => {
-    try {
-       const events = await Event.find({})
-       const detail = new Detail()
-       res.render('details/new', {
-           events: events,
-           detail: detail
-       })
-       } catch {
-           res.redirect('/details')
-       }
+res.send('this is where events can be vieweed')
+
+    // try {
+    //    const events = await Event.find({})
+    //    const detail = new Detail()
+    //    res.render('details/new', {
+    //        events: events,
+    //        detail: detail
+    //    })
+    //    } catch {
+    //        res.redirect('/details')
+    //    }
 });
 
 //POST//create route

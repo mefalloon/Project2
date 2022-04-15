@@ -1,15 +1,17 @@
+@import url(//fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap);
+
+
 * {
   box-sizing: border-box;
-  font-family:'Josefin Sans', sans-serif;
-  color: #cf4b4b;
+  font-family: 'Josefin', sans-serif;
+  color: #be5980;
 }
 
 body {
   margin: 0;
   height: 100vh;
   display: grid;
-  font-family: 'Josefin Sans', sans-serif;
-  background-image: url('../images/party.jpeg');
+  background-image: url('../images/Pastel\ Background.jpg');
   grid-template-rows: 50px 1fr;
   grid-template-areas:
     "nav"
@@ -17,9 +19,15 @@ body {
  
 }
 
+
+h2 {
+  font-family: 'Josefin', sans-serif;
+
+}
+
 body > nav {
   grid-area: nav;
-  background-color: #111111;
+  background-color: #ffffff;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -41,6 +49,16 @@ body > a {
   text-align: center;
 } 
 
+
+
+/* #list a {
+  border-radius: 4px;
+  background-color: #B8C0C2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+} */
+
 #text{
   position: absolute;
   top: 50%;
@@ -53,12 +71,35 @@ body > a {
 
 #overlay {
   margin: 100px;
-  background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+  background-color: rgba(243, 230, 211, 0.9); /* background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
 
-.new-form {
-  text-align: center;
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
 
+.login img {
+  height: 30px;
+}
+
+.button {
+  background-color: #ddd;
+  padding: .5rem 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+ 
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: 20px;
+  
+}
+
+.new-form {
+  text-align: left;
 }

@@ -14,40 +14,42 @@
             
           </nav> -->
           <%- include('../partials/header') %>
-          <div class="container">
-     <h1> RSVP and Connect !</h1>
+         
+     <h1> TIME WAITS FOR NO ONE!</h1>
 
-
-            <div class="gallery">
-                <ul>
-                    <li>Name</li>
-                    <li>Location</li>
-                    <li> Date </li>
-
-
-            </div>
-
-            <table id="list">
+              <table id="list">
               <thead>
                 <tr>
                   <th>Title</th>
-                  <th></th>
+                  <th>Schedule</th>
+                  <th>urgent</th>
+                  <th>Description</th>
+                  <th>completed</th>
                 </tr>
               </thead>
+
               <tbody>
                 <% events.forEach(function(ev) { %>
                   <tr>
                     <td><%= ev.name %></td> <!--figure out how to print just name-->
+                    <td><%= ev.schedule %></td>
+                    <td><%= ev.location %></td>
+                    <td><%= ev.description %></td>
+                    <td><%= ev.completed %></td>
                   </tr>
                   <tr>
-                    <td> <form action="/events/<%= ev._id %>?_method=DELETE" method="POST">
-                      <button type="submit">X</button>
-                    </form>
-                  </td> <!--figure out how to print just name-->
+                    <td> 
+                     <form action="/events/<%= ev._id %>?_method=DELETE" method="POST">
+                      <button type="submit">X</button> </form>
+                      <input type="checkbox" name="completed" notchecked>
+                    </td>
+
+                   <!--figure out how to print just name-->
                   </tr>
                   <% }); %>
                 </tbody>
               </table>
-            <!-- </body>
-            </html> -->  
+            
+           </body>
+            </html>
 
