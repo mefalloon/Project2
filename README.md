@@ -13,13 +13,14 @@ AHH OUH! In the time frame I was allocated with I wasnt able to do my idea in th
 <li>Properly implement CRUD</li>
 <li>Oauth:User log-in compability</li>
 
-<p>"Nizer" is your gateway to perfect organization, in its first phase youll be able to add a goal or plan out your day to get you on the right <b>path</b> (pun intended).<br>
+<h2> New Idea </h2>
+"Nizer" is your gateway to perfect organization, in its first phase youll be able to add a goal or plan out your day to get you on the right <b>path</b> (pun intended).<br>
 
 The name is a simple break down of what you're looking to do which is organize!<br>
 
 
 The app uses Google API to allow all users to log in and have access to the goals they are wanting to check off! After creating the event the user can also update, check completed or delete the goal if they no longer need to see it
-</p>
+
 
 
 <h2>Where it stared:</h2>
