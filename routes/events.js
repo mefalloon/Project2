@@ -8,9 +8,6 @@ const Event = require('../models/event');
 //GET//All events route 
 router.get('/', async (req, res) => {
     let searchOptions = {}
-    // if (req.query.name != null && req.query.name !== '') {
-    //     searchOptions.name = new RegExp(req.query.name, 'i')
-    // }
     try {
         const events = await Event.find(searchOptions)
         res.render('events', {
@@ -39,18 +36,17 @@ router.post('/', async (req, res) => {
 
       event.save()
       // const newEvent = await event.save()
-      // res.redirect(`authors/${newAuthor.id}`)
       res.redirect('/events')
     } catch {
       res.render('events/new', {
         event: event,
-        errorMessage: 'Error creating Author'
+        errorMessage: 'Error creating Event'
       })
     }
   })
 
   router.delete('/:id', async(req, res) => {
-    console.log("in delete")
+  
     Event.findOne({'_id': req.params.id}, function(err, event){
       // const event = eventDocument.id(req.params.id)
       event.remove()
