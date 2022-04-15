@@ -2,13 +2,14 @@
 <h2>Original Idea</h2>
 An application called RSVP where people could find events in their local area and connect with other confirmed RSVPs. To bring people back together after a pandemic.
 
-![yikes](./public/images/yikes.png)  
 <h2>Pivot:</h2>
-AHH OUH! In the time fram I was allocated with I wasnt able to do my idea in the way that I wanted and chose to go a different route to make sure there was a product that could be viewed.
 
-<p>Nizer is your gateway to perfect organization, in its first phase youll be able to add a goal or plan out your day to get you on the right <b>path</b> (pun intended).<br>
+![yikes](./public/images/yikes.png)<br>
+AHH OUH! In the time frame I was allocated with I wasnt able to do my idea in the way that I wanted and chose to go a different route to make sure there was a product that could be viewed.
 
-The name is a siple break down of what youre looking to do which is organize!<br>
+<p>"Nizer" is your gateway to perfect organization, in its first phase youll be able to add a goal or plan out your day to get you on the right <b>path</b> (pun intended).<br>
+
+The name is a simple break down of what you're looking to do which is organize!<br>
 
 
 The app uses Google API to allow all users to log in and have access to the goals they are wanting to check off! After creating the event the user can also update, check completed or delete the goal if they no longer need to see it
@@ -19,7 +20,7 @@ The app uses Google API to allow all users to log in and have access to the goal
 
 ![wireframe](./public/images/w1.png)  
 
-![view page](./public/images/1.png)  
+![view page](./public/images/goal.png)  
 <h2>Technologies Used:</h2>
 <ul>
 <li>CSS</li>
