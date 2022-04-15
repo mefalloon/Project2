@@ -33,12 +33,14 @@
                     <td><%= ev.description %></td>
                     <td><%= ev.location %></td>
                     <td><%= ev.schedule %></td>
-                    <td> 
+                    <td><input type="checkbox" name="completed" notchecked>
+                    </td>
+                    <td>
                       <form action="/events/<%= ev._id %>?_method=DELETE" method="POST">
-                       <button class="button4" type="submit">CLEAR</button> 
-                     </form> </td>
-                     <td><input type="checkbox" name="completed" notchecked>
-                     </td>
+                      <button class="button4" type="submit">CLEAR</button> 
+                    </form> </td>
+                   
+                   
                   </tr>
                   <tr>
                  

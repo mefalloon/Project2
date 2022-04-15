@@ -3,11 +3,7 @@ const app = require('../server');
 const router = express.Router();
 const Event = require('../models/event');
 
-// const eventsCtrl = require('../controllers/events.js');
 
-// router.get('/', (req,res) =>{
-//     res.send(`events`)
-// })
 
 // all events route 
 router.get('/', async (req, res) => {
@@ -17,8 +13,6 @@ router.get('/', async (req, res) => {
     // }
     try {
         const events = await Event.find(searchOptions)
-        console.log("in get events")
-        console.log(events)
         res.render('events', {
         events
           //  searchOptions: req.query
@@ -40,13 +34,9 @@ router.post('/', async (req, res) => {
       name: req.body.name,
       location: req.body.location,
       description:  req.body.description
-
     })
     try {
-      console.log("in try with :")
-      console.log(event)
       event.save()
-    
       // const newEvent = await event.save()
       // res.redirect(`authors/${newAuthor.id}`)
       res.redirect('/events')
@@ -69,8 +59,7 @@ router.post('/', async (req, res) => {
     })
   })
 
-
-
+//this or async
 // router.post('/', (req, res) => {
 //     const event = new Event({
 //         name: req.body.name
