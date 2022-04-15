@@ -1,41 +1,39 @@
 <%- include('../partials/header') %>
-<div class="card">
+
 <div class="new-form">
-<h2> Lets Get Some Order </h2> 
-<h3>But First: </h3>
-<p>How does NASA organize a party? - They planet.</p>
+    <div class="form-title">
+        <h2> Lets Get Some Order </h2> 
+        <h3>But First: </h3>
+        <p>How does NASA organize a party? - They planet.</p>   
+    </div>
+    <form action="/events" method="POST">
+        <div class="form-row">
+            <div class="form-column">
 
+     <label>Label your goal!</label>
+     <input type="text" name="name"><br>
 
+    <label>Timing is Everything.</label><br>
+    <input type="datetime-local" name="schedule"><br>
 
-<form action="/events" method="POST">
-<div class="form-row">
-    <div class="form-item">
-    <label>Goal Name:</label>
-    <input type="text" name="name"><br>
+    <label>Get detailed.</label>
+    <textarea name="description" placeholder="List out your goal!" style="height:150px"></textarea><br>
 
-    <label>Schedule</label><br>
-        <input type="datetime-local" name="schedule"><br>
-
-
-    <label>Description</label>
-    <textarea name="description"></textarea><br>
-
-    <label>How Urgent?</label>
+    <label>How urgent is it?</label>
     <select name="location">
-    <!-- <input type="text" name="location"> -->
     <option value="Chilling">Chilling</option>
-    <option value="House on fire">House on fire</option>
-   </select>
+    <option value="House on fire">House on fire</option></select>
 
-   <label>Completed:</label>
-   <input type="checkbox" name="completed" notchecked>
+   <!-- <label>Completed:</label>
+   <input type="checkbox" name="completed" notchecked> -->
 
-
-   <button class="button" type="submit">
-       <a href="/events"> Cancel </a></button>
-    <button class="button" type="submit">Create</button>
+   <button class="button3" type="submit">
+    <a href="/events"> Cancel </a></button>
+    <button class="button2" type="submit">Create</button>
 </div>
+    </div>
 </div>
+
 </form>
 
 

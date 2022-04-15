@@ -1,35 +1,33 @@
-# passport-boilerplate
+<h2>Project 2: Full-Stack Development</h2>
+<p>Nizer is your gateway to perfect organization, in its first phase youll be able to add a goal or plan out your day to get you on the right <b>path</b> (pun intended).<br>
+
+The name is a siple break down of what youre looking to do which is organize!<br>
 
 
-This is your passport boilerplate.
+The app uses Google API to allow all users to log in and have access to the goals they are wanting to check off! After creating the event the user can also update, check completed or delete the goal if they no longer need to see it
+</p>
 
-## Setup 
-
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+<h2>Where it stared:</h2>
+![alt text](./public/images/w1.png);
+![alt text](./public/images/1.png)
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin master`
 
-#### Setup your login
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+<h2>Technologies Used:</h2>
+<ul>
+<li>CSS</li>
+<li>Express</li>
+<li>JavaScript</li>
+<li>Google OAuth 2.0</li>
+<li>Heroku</li>
+<li>MongoDB / mongoose</li>
+<li>Node.js</li>
+<li>Passport</li>
+</ul>
 
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+<h2>Next Steps</h2>
+<ul>
+<li> Enhance UI for proper user flow</li>
+<li> Add functionality for editing, saving and to view 1 goal on a larger scale</li>
+<li>Drag and grop feature</li>

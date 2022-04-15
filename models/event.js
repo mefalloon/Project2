@@ -18,10 +18,10 @@ const eventSchema = new Schema({
         required: false
     },
 
-    completed: { 
-        type: Boolean,
-        default: false 
-    },
+    // completed: { 
+    //     type: Boolean,
+    //     default: false 
+    // },
 
     schedule: {
 		type: Date,

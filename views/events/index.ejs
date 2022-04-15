@@ -1,55 +1,53 @@
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Document</title>
-</head> -->
-<!-- <body>
-        <nav>
-            <a href="/events/">Home</a>
-            
-          </nav> -->
-          <%- include('../partials/header') %>
-         
-     <h1> TIME WAITS FOR NO ONE!</h1>
+<%- include('../partials/header') %>
 
-              <table id="list">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Schedule</th>
-                  <th>urgent</th>
-                  <th>Description</th>
-                  <th>completed</th>
+<div class="header">TIME WAITS FOR NO ONE!</div>
+              <table>               
+                <thead>
+                  <tr>
+                  <th>
+                    <h3>Goal</h3>
+                  </th>
+                  <th>
+                    <h3>Description</h3>
+                  </th>
+                  <th>
+                    <h3>Priority</h3>
+                  </th>
+                  <th>
+                    <h3>Schedule</h3>
+                  </th>
+                  <th>
+                    <h3>Completed</h3>
+                  </th>
+                  <th>
+                    <h3>Remove</h3>
+                  </th>
                 </tr>
               </thead>
-
+             
               <tbody>
                 <% events.forEach(function(ev) { %>
                   <tr>
-                    <td><%= ev.name %></td> <!--figure out how to print just name-->
-                    <td><%= ev.schedule %></td>
-                    <td><%= ev.location %></td>
+                    <!-- refer back to schema (req.body>_)  -->
+                    <td><%= ev.name %></td> 
                     <td><%= ev.description %></td>
-                    <td><%= ev.completed %></td>
+                    <td><%= ev.location %></td>
+                    <td><%= ev.schedule %></td>
+                    <td> 
+                      <form action="/events/<%= ev._id %>?_method=DELETE" method="POST">
+                       <button class="button4" type="submit">CLEAR</button> 
+                     </form> </td>
+                     <td><input type="checkbox" name="completed" notchecked>
+                     </td>
                   </tr>
                   <tr>
-                    <td> 
-                     <form action="/events/<%= ev._id %>?_method=DELETE" method="POST">
-                      <button type="submit">X</button> </form>
-                      <input type="checkbox" name="completed" notchecked>
-                    </td>
+                 
 
                    <!--figure out how to print just name-->
                   </tr>
                   <% }); %>
                 </tbody>
               </table>
-            
            </body>
             </html>
-
+          
